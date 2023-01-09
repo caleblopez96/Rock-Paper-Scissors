@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F8F8FF;
+    font-family: 'Inter', sans-serif;
+}
+
+.selections {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    gap: 2rem;
+}
+
+.selection {
+    background: none;
+    border: none;
+    font-size: 4rem;
+    outline: none;
+    cursor: pointer;
+    transition: 300ms;
+}
+
+.selection:hover {
+    transform: scale(1.15);
+}
+
+.results {
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 0;
+}
+
+.resultScore {
+    margin-left: .1rem;
+    font-size: .75rem;
+}
+
+.resultSelection {
+    opacity: .5;
+}
+
+.resultSelection.winner {
+    opacity: 1;
+    font-size: 1.25rem
+}
