@@ -8,12 +8,27 @@
     <title>Rock, Paper, Scissors</title>
 </head>
 <body>
+    <header> Rock, Paper, Scissors! </header>
+    <section class="history"> 
+        <p>Rock, Paper, Scissors, also known as Rochambeau or Roshambo is a game of chance that depends on random luck similar to flipping coins.</p> 
+        <p>The game is simple:</p>
+    <ul>
+        <li>Rock beats scissors</li>
+        <li>Paper beats rock</li> 
+        <li>Scissors beats paper</li> 
+        <li>* If both players make the same move, it is considered a tie, and play resumes until there is a clear winner *</li>
+    </ul> 
+        <p>See how many times you can beat the computer</p>
+    </section>
     <div class="selections">
         <button class="selection" data-selection="rock">✊</button>
         <button class="selection" data-selection="paper">✋</button>
         <button class="selection" data-selection="scissors">✌️</button>
+    </div>
+    <div class="resultsText"> 
+        Make a move <span class="ellipses"> </span>
         </div>
-        <div class="results">
+    <div class="results">
         <div>
         You:
         <span class="resultScore" data-your-score>0</span>

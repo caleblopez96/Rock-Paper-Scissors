@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans:wght@300&display=swap");
 
 *,
 *::before,
@@ -9,8 +9,47 @@
 }
 
 body {
-    background-color: #F8F8FF;
-    font-family: 'Inter', sans-serif;
+    background-image: linear-gradient(to right bottom, #e7cee3, #e3d3e7, #e0d8e9, #dfddea, #e0e1e9);
+    color: #252525;
+    padding: 0.5rem;
+    font-family: "Open Sans", sans-serif;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.history {
+    padding: 1rem;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, #252525, #4a4a4a);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: auto;
+}
+
+p,
+ul {
+    color: #fafafa;
+    padding: 0.25rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+li {
+    padding: 0.25rem 0 0.25rem 0.5rem;
+}
+
+li:last-child {
+    font-style: italic;
+    list-style-type: none;
+}
+
+p:last-child {
+    text-align: center;
 }
 
 .selections {
@@ -18,7 +57,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 2rem 0;
-    gap: 2rem;
+    gap: rem;
 }
 
 .selection {
@@ -34,6 +73,29 @@ body {
     transform: scale(1.15);
 }
 
+.ellipses:after {
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis steps(4, end) 5500ms infinite;
+    -webkit-animation: ellipsis steps(4, end) 5500ms infinite;
+    content: "...";
+    width: 0px;
+    padding-left: 0.1rem;
+}
+
+@keyframes ellipsis {
+to {
+    width: 1.25em;
+    }
+}
+
+@-webkit-keyframes ellipsis {
+to {
+    width: 1.25em;
+    }
+}
+
 .results {
     display: grid;
     justify-content: center;
@@ -43,16 +105,21 @@ body {
     margin: 1rem 0;
 }
 
+.resultsText {
+    display: flex;
+    justify-content: center;
+}
+
 .resultScore {
-    margin-left: .1rem;
-    font-size: .75rem;
+    margin-left: 0.1rem;
+    font-size: 0.75rem;
 }
 
 .resultSelection {
-    opacity: .5;
+    opacity: 0.5;
 }
 
 .resultSelection.winner {
     opacity: 1;
-    font-size: 1.25rem
+    font-size: 1.25rem;
 }
